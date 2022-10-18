@@ -4,7 +4,6 @@ import base64
 import time
 import numpy as np
 import math
-import plotly.graph_objects as go
 import hydralit_components as hc
 import numpy as np
 import pandas as pd
