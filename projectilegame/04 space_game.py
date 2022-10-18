@@ -9,40 +9,40 @@ c1.title("The Game")
 restart = c2.button("Restart")
 
 # Gravity constants by planet
-GRAVITY_DICT = {'Earth': 9.8, 'Moon': 1.6, 'Mars': 3.7, 'Jupiter': 24.8}
+Gravity_constant = {'Earth': 9.8, 'Moon': 1.6, 'Mars': 3.7, 'Jupiter': 24.8}
 
 # Setup the session_state variables
-if restart or "remaining_guesses" not in st.session_state:
-    st.session_state["remaining_guesses"] = 3
+if restart or "guesses_remaining" not in st.session_state:
+    st.session_state["guesses_remaining"] = 3
 
 if restart or"guess_list" not in st.session_state:
     st.session_state["guess_list"] = []
 
-if restart or"game_gravity_index" not in st.session_state:
-    st.session_state["game_gravity_index"] = np.random.randint(0, len(GRAVITY_DICT))
-planet_list = list(GRAVITY_DICT.keys())
-game_planet = planet_list[st.session_state["game_gravity_index"]]
-game_gravity = GRAVITY_DICT[game_planet]
+if restart or"gravity_game_index" not in st.session_state:
+    st.session_state["gravity_game_index"] = np.random.randint(0, len(Gravity_constant))
+planet_list = list(Gravity_constant.keys())
+planet_game = planet_list[st.session_state["gravity_game_index"]]
+gravity_game = Gravity_constant[planet_game]
 
 if restart or "solution" not in st.session_state:
     v0_sol = np.random.randint(30, 60)
     theta_deg_sol = 45
     theta_rad_sol = theta_deg_sol * np.pi / 180
-    t_max_sol = 2*v0_sol*np.sin(theta_rad_sol)/game_gravity
+    t_max_sol = 2*v0_sol*np.sin(theta_rad_sol)/gravity_game
     x_max_sol = v0_sol*np.cos(theta_rad_sol)*t_max_sol
-    pig_position = [x_max_sol, 0]
+    aste_position = [x_max_sol, 0]
     st.session_state["solution"] = {
-                                    "pig_position":pig_position, 
+                                    "aste_position":aste_position, 
                                     "v0_sol": v0_sol, 
                                     "theta_deg_sol": theta_deg_sol,
                                     }
 
 article_dict = {'Earth': "", 'Moon': "the", 'Mars': "", 'Jupiter': ""}
-c1.subheader(f"Can you hit the target on {article_dict[game_planet]} {game_planet}?")
+c1.subheader(f"Can you hit the target on {article_dict[planet_game]} {planet_game}?")
 
 # Pig position
-x_text = f"x = {st.session_state.solution['pig_position'][0]:.3f} meters"
-y_text = f"y = {st.session_state.solution['pig_position'][1]:.3f} meters"
+x_text = f"x = {st.session_state.solution['aste_position'][0]:.3f} meters"
+y_text = f"y = {st.session_state.solution['aste_position'][1]:.3f} meters"
 st.write(f"The target is at **{x_text}** and **{y_text}**")
 # Get the parameters
 st.subheader("Enter the parameters")
@@ -56,36 +56,36 @@ theta_deg = c2.slider("Initial Angle [degrees]",
                         min_value=5, max_value=90, 
                         value=30, step=5, help="Initial velocity for the projectile")
 # options for gravity: earth, moon, mars, jupiter
-c3.metric(value=game_gravity, label=f"{game_planet}'s gravity in m/s^2")
+c3.metric(value=gravity_game, label=f"{planet_game}'s gravity in m/s^2")
 
 # Shoooooot
-if st.session_state["remaining_guesses"] > 0:
+if st.session_state["guesses_remaining"] > 0:
     if c4.button("Shoot!"):
-        st.session_state["remaining_guesses"] -= 1
-        traj_dict = get_trajectory(v0, theta_deg, game_gravity, game_planet)
-        st.session_state["guess_list"].append(traj_dict)
+        st.session_state["guesses_remaining"] -= 1
+        trajectory_dict = get_trajectory(v0, theta_deg, gravity_game, planet_game)
+        st.session_state["guess_list"].append(trajectory_dict)
 
 # Placeholder for information
 placeholder = st.empty()
 
 # Always plot, to show the target
-fig = fig_from_list(st.session_state["guess_list"], st.session_state.solution["pig_position"])
+fig = fig_from_list(st.session_state["guess_list"], st.session_state.solution["aste_position"])
 st.pyplot(fig)
 
 # We check if we hit the pig after the shoot we have guesses left
-if check_solution(st.session_state.solution["pig_position"], st.session_state["guess_list"]):
-    placeholder.success("You hit the pig... I mean, the target!")
-elif st.session_state["remaining_guesses"] == 0:
-    line1 = "You're out of guesses! :("
+if check_solution(st.session_state.solution["aste_position"], st.session_state["guess_list"]):
+    placeholder.success("You hit the rock!...I mean asteriod!")
+elif st.session_state["guesses_remaining"] == 0:
+    line_1 = "Oh no you are out of guesses :( anyway"
     v0_sol = st.session_state.solution["v0_sol"]
     theta_deg_sol = st.session_state.solution["theta_deg_sol"]
-    line2 = f"One possible solution was $v_0$={v0_sol} [m/s^2] and $\\\\theta$={theta_deg_sol} [deg]"
-    placeholder.error(line1 + line2)
+    line_2 = f"One possible solution was $v_0$={v0_sol} [m/s^2] and $\\\\theta$={theta_deg_sol} [deg]"
+    placeholder.error(line_1 + line_2)
 else:
     # Say to keep trying, but only if at least tried once
-    if st.session_state['remaining_guesses']==2:
-        text = f"Keep trying! You have {st.session_state['remaining_guesses']} guesses remaining. Have you tried solving the equations?"
+    if st.session_state['guesses_remaining']==2:
+        text = f"Keep trying! You have {st.session_state['guesses_remaining']} guesses remaining. Did you try solving the equations?"
         placeholder.warning(text)
-    if st.session_state['remaining_guesses']==1:
-        text = f"Use carefully the last guess!"
+    if st.session_state['guesses_remaining']==1:
+        text = f"Last Guess you got thisss!!!"
         placeholder.warning(text)
