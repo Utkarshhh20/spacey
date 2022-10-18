@@ -53,7 +53,7 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 menu_data = [
     {'icon': "fa fa-desktop", 'label':"Fundamental Indicators"},
     {'icon': "fa fa-signal", 'label':"Rocket Simulation"},
-    {'icon': "fa fa-angle-double-left", 'label':"Backtesting"},
+    {'icon': "fa fa-angle-double-left", 'label':"Create your own galaxy"},
     {'icon': "bi bi-pie-chart", 'label':"Asteroid Defense"},
     {'icon': "bi bi-twitter", 'label':"Twitter Analysis"},
 ]
@@ -62,7 +62,7 @@ over_theme = {'txc_inactive': "#D3D3D3",'menu_background':'#3948A5','txc_active'
 dashboard = hc.nav_bar(
 menu_definition=menu_data,
 override_theme=over_theme,
-home_name='Tradelyne',
+home_name='SpaceY.',
 hide_streamlit_markers=True, #will show the st hamburger as well as the navbar now!
 sticky_nav=True, #at the top or not
 sticky_mode='sticky', #jumpy or not-jumpy, but sticky or pinned
@@ -237,3 +237,23 @@ elif dashboard=='Rocket Simulation':
 
         text5='Fuel and total vehicle mass'
         make_fig("t",["fuel","mass"],"Heading (in the absolute xy plane)",text5,col1)
+if dashboard=='Create your own galaxy':
+    total_points = st.slider("Number of points in spiral", 1, 6000, 2000)
+    num_turns = st.slider("Number of turns in spiral", 1, 150, 9)
+
+    Point = namedtuple('Point', 'x y')
+    data = []
+
+    points_per_turn = total_points / num_turns
+
+    for curr_point_num in range(total_points):
+        curr_turn, i = divmod(curr_point_num, points_per_turn)
+        angle = (curr_turn + 1) * 2 * math.pi * i / points_per_turn
+        radius = curr_point_num / total_points
+        x = radius * math.cos(angle)
+        y = radius * math.sin(angle)
+        data.append(Point(x, y))
+
+    st.altair_chart(alt.Chart(pd.DataFrame(data), height=650, width=650)
+        .mark_circle(color='#0068c9', opacity=0.5)
+        .encode(x='x:Q', y='y:Q'))
