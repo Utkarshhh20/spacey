@@ -31,6 +31,10 @@ sticky_mode='sticky', #jumpy or not-jumpy, but sticky or pinned
 use_animation=True,
 key='NavBar'
 )
+st.write('')
+st.write('')
+st.write('')
+st.write('')
 if dashboard=='Asteroid Defense':
     stb.set_book_config(path="projectilegame")
 elif dashboard=='Rocket Simulation':
