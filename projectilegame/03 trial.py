@@ -4,8 +4,8 @@ import numpy as np
 
 from funcs.trajectory import get_trajectory, fig_from_list
 
-if "trayectory_list" not in st.session_state:
-    st.session_state["trayectory_list"] = []
+if "trajectory_list" not in st.session_state:
+    st.session_state["trajectory_list"] = []
 
 st.title("Trajectory of a projectile")
 st.subheader("Equations of motion of a projectile")
@@ -35,8 +35,8 @@ if c1.button("Add plot"):
 if c2.button("Clear plots"):
     st.session_state["trayectory_list"] = []
 
-if len(st.session_state["trayectory_list"]) > 0:
-    fig = fig_from_list(st.session_state["trayectory_list"])
+if len(st.session_state["trajectory_list"]) > 0:
+    fig = fig_from_list(st.session_state["trajectory_list"])
     st.pyplot(fig)
 
 st.subheader("Quiz time!")
