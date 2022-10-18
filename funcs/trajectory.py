@@ -47,10 +47,10 @@ def fig_from_list(trajectory_list, pig_position=[]):
     plt.ylabel('y - vertical distance in meters', fontsize=20)
 
     if len(pig_position) > 0:        
-        plot_emoji("images/pig.png", ax, pig_position[0], pig_position[1])
+        plot_emoji("images/asteroid.png", ax, pig_position[0], pig_position[1])
         xmax_list.append(pig_position[0])
         for trajectory in trajectory_list:
-            plot_emoji("images/bird.png", ax, trajectory["x"][-1], trajectory["y"][-1])
+            plot_emoji("images/rocket.png", ax, trajectory["x"][-1], trajectory["y"][-1])
         plt.legend(legend, fontsize=20, loc='upper center')
 
     if len(xmax_list) > 0:
