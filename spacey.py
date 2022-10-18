@@ -7,7 +7,7 @@ import math
 import plotly.graph_objects as go
 import hydralit_components as hc
 
-st.set_page_config(page_title="SpaceY", page_icon="🚀")
+st.set_page_config(page_title="SpaceY", page_icon="🚀", layout="wide")
 menu_data = [
     {'icon': "fa fa-desktop", 'label':"Fundamental Indicators"},
     {'icon': "fa fa-signal", 'label':"Chart Analysis"},
