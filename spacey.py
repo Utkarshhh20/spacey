@@ -27,5 +27,5 @@ sticky_mode='sticky', #jumpy or not-jumpy, but sticky or pinned
 use_animation=True,
 key='NavBar'
 )
-
-stb.set_book_config(path="projectilegame")
+if dashboard=='Asteroid Defense':
+    stb.set_book_config(path="projectilegame")
