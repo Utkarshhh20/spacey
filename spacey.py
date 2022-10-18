@@ -27,7 +27,7 @@ img = get_img_as_base64("spacebg.png")
 page_bg_img = f"""
 <style>
 [data-testid="stAppViewContainer"] > .main {{
-background-image: url("https://images.unsplash.com/photo-1516331138075-f3adc1e149cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=908&q=80");
+background-image: url("https://images.unsplash.com/photo-1555226196-f9930c35a7b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2068&q=80");
 background-size: 100%;
 background-position: top left;
 background-repeat: repeat;
