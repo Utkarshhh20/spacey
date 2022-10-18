@@ -9,6 +9,8 @@ import numpy as np
 import pandas as pd
 import plotly.graph_objects as go
 import plotly.express as px
+from collections import namedtuple
+import altair as alt
 from sim import World, Vehicle
 
 st.set_page_config(page_title="SpaceY", page_icon="🚀", layout="wide")
