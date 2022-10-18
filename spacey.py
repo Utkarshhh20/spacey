@@ -181,21 +181,21 @@ elif dashboard=='Rocket Simulation':
         make_fig("t",["alt", "range"],"Altitude and range displacements.",text1,col1)
 
         text10 = 'alt,range and magnitude velocity against mission time.'
-        make_fig("t",["dalt", "drange", "dxy"],"X and y displacements against time in the cartesian grid",text10,col1)
+        make_fig("t",["dalt", "drange", "dxy"],"X and y displacements against time in the xy plane",text10,col1)
 
 
-        text2 = 'This graph shows the same information as on the left but in an absolute cartesian form. Useful for seeing how the rocket flies around the curvuture of the earth.'
-        make_fig("x","y","x and y displacements in the cartesian grid",text2,col2)
+        text2 = 'This graph shows the same information as on the left but in an absolute xy plane form. Useful for seeing how the rocket flies around the curvuture of the earth.'
+        make_fig("x","y","x and y displacements in the xy plane",text2,col2)
 
         text3 = 'Same info as above, split into compnents '
-        make_fig("t",["y","x"],"x and y displacements in the cartesian grid",text3,col2)
+        make_fig("t",["y","x"],"x and y displacements in the xy plane",text3,col2)
 
         text3 = 'x,y and magnitude velocity against mission time.'
-        make_fig("t",["dy", "dx", "dxy"],"X and y displacements against time in the cartesian grid",text3,col2)
+        make_fig("t",["dy", "dx", "dxy"],"X and y displacements against time in the xy plane",text3,col2)
 
         text4=''
-        make_fig("t",["heading","ang"],"Heading (in the absolute cartesian grid)",text4,col2)
+        make_fig("t",["heading","ang"],"Heading (in the absolute xy plane)",text4,col2)
 
 
         text5='Fuel and total vehicle mass'
-        make_fig("t",["fuel","mass"],"Heading (in the absolute cartesian grid)",text5,col1)
+        make_fig("t",["fuel","mass"],"Heading (in the absolute xy plane)",text5,col1)
