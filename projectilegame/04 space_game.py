@@ -30,9 +30,9 @@ if restart or "solution" not in st.session_state:
     theta_rad_sol = theta_deg_sol * np.pi / 180
     t_max_sol = 2*v0_sol*np.sin(theta_rad_sol)/game_gravity
     x_max_sol = v0_sol*np.cos(theta_rad_sol)*t_max_sol
-    pig_position = [x_max_sol, 0]
+    meteor_position = [x_max_sol, 0]
     st.session_state["solution"] = {
-                                    "pig_position":pig_position, 
+                                    "meteor_position":meteor_position, 
                                     "v0_sol": v0_sol, 
                                     "theta_deg_sol": theta_deg_sol,
                                     }
@@ -40,9 +40,9 @@ if restart or "solution" not in st.session_state:
 article_dict = {'Earth': "", 'Moon': "the", 'Mars': "", 'Jupiter': ""}
 c1.subheader(f"Can you hit the target on {article_dict[game_planet]} {game_planet}?")
 
-# Pig position
-x_text = f"x = {st.session_state.solution['pig_position'][0]:.3f} meters"
-y_text = f"y = {st.session_state.solution['pig_position'][1]:.3f} meters"
+# meteor position
+x_text = f"x = {st.session_state.solution['meteor_position'][0]:.3f} meters"
+y_text = f"y = {st.session_state.solution['meteor_position'][1]:.3f} meters"
 st.write(f"The target is at **{x_text}** and **{y_text}**")
 # Get the parameters
 st.subheader("Enter the parameters")
@@ -69,12 +69,12 @@ if st.session_state["remaining_guesses"] > 0:
 placeholder = st.empty()
 
 # Always plot, to show the target
-fig = fig_from_list(st.session_state["guess_list"], st.session_state.solution["pig_position"])
+fig = fig_from_list(st.session_state["guess_list"], st.session_state.solution["meteor_position"])
 st.pyplot(fig)
 
-# We check if we hit the pig after the shoot we have guesses left
-if check_solution(st.session_state.solution["pig_position"], st.session_state["guess_list"]):
-    placeholder.success("You hit the pig... I mean, the target!")
+# We check if we hit the meteor after the shoot we have guesses left
+if check_solution(st.session_state.solution["meteor_position"], st.session_state["guess_list"]):
+    placeholder.success("You hit the meteor... I mean, the target!")
 elif st.session_state["remaining_guesses"] == 0:
     line1 = "You're out of guesses! :("
     v0_sol = st.session_state.solution["v0_sol"]
@@ -88,4 +88,4 @@ else:
         placeholder.warning(text)
     if st.session_state['remaining_guesses']==1:
         text = f"Use carefully the last guess!"
-        placeholder.warning(text)            
+        placeholder.warning(text)       
