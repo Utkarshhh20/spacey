@@ -63,7 +63,7 @@ elif dashboard=='Rocket Simulation':
     col1, colc, col2 = st.columns((1, 5, 1))
 
 
-    colc.markdown('<h1 style="text-align: center;">Dashboard Space Program V 0.1</h1>',
+    colc.markdown('<h1 style="text-align: center;">Dashboard Space Program Simulation</h1>',
                   unsafe_allow_html=True)
     colc.markdown("""*This project was inspired to emulate a simplified model of a Falcon-9. This ended up being one of our team's most favorite projects as it utilized applied physics and programming""", unsafe_allow_html=False)
     colc.markdown(""" ## The Simulation""", unsafe_allow_html=False)
