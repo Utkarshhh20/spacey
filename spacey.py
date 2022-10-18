@@ -60,12 +60,12 @@ elif dashboard=='Rocket Simulation':
     heading = []
     rocket.theta = 1
     thrust = 0
-    col1, colc, col2 = st.beta_columns((1, 5, 1))
+    col1, colc, col2 = st.columns((1, 5, 1))
 
 
     colc.markdown('<h1 style="text-align: center;">Dashboard Space Program V 0.1</h1>',
                   unsafe_allow_html=True)
-    colc.markdown("""*This project was inspired to emulate a simplified model of a Falcon-9. This ended up being one of our team's most favorite projects""", unsafe_allow_html=False)
+    colc.markdown("""*This project was inspired to emulate a simplified model of a Falcon-9. This ended up being one of our team's most favorite projects as it utilized applied physics and programming""", unsafe_allow_html=False)
     colc.markdown(""" ## The Simulation""", unsafe_allow_html=False)
     colc.markdown("""The environment of the simulation is a simple atmosphere with different pressures based on different altitudes, This was done by using the formulas from this [site](https://www.grc.nasa.gov/www/k-12/rocket/atmosmet.html). \
                     This lets the rocket experience different drag at different positions, making the simulation more realistic. The atmosphere ends at an altitude of 120km, where it is nearly negligible.
@@ -84,7 +84,7 @@ elif dashboard=='Rocket Simulation':
 
     colc.markdown('<h1 style="text-align: center;">Vehicle Control</h1>',
                   unsafe_allow_html=True)
-    col1, colc1, col2 = st.beta_columns((1,6,1))
+    col1, colc1, col2 = st.columns((1,6,1))
 
     colc1.markdown("""You can program the rocket behaviour in the window below.
     The rocket program is dictionary of dictionaries. At the highest level the dictionary contains unique `rules`. Each `rule` in the dictionary has the following structure:
@@ -142,7 +142,7 @@ elif dashboard=='Rocket Simulation':
 
 
         # columns for better alignment
-        _,col1, col2,_ = st.beta_columns((1,3,3,1))
+        _,col1, col2,_ = st.columns((1,3,3,1))
 
         labels0 = {
             "x": "x-displacement (m)",
