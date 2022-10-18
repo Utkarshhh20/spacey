@@ -45,6 +45,6 @@ stb.single_choice("At what angle is obtained the maximal distance?",
                 options=["15", "30", "45", "60", "75"], answer_index=2)
 
 try:
-    stb.true_or_false("NASA successfully crashed a spacecraft into an asteroid in a test of planetary defense.", answer=True)
+    stb.true_or_false("NASA successfully crashed a spacecraft into an asteroid in a test of planetary defense.", key=answer,answer=True)
 except:
     pass
