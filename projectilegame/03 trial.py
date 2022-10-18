@@ -41,8 +41,8 @@ if len(st.session_state["trayectory_list"]) > 0:
 
 st.subheader("Quiz time!")
 
-stb.single_choice("At what angle is obtained the maximal distance?",
+stb.singlechoice("At what angle is obtained the maximal distance?",
                 options=["15", "30", "45", "60", "75"], answer_index=2)
 
-stb.true_or_false("NASA successfully crashed a spacecraft into an asteroid in a test of planetary defense.",
-                    answer=True)
+stb.trueorfalse("NASA successfully crashed a spacecraft into an asteroid in a test of planetary defense.",
+                    answer=True, key='Trueorfalse')
