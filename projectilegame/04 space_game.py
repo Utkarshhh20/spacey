@@ -1,7 +1,7 @@
 import streamlit as st
 import numpy as np
 
-from code.trajectory import get_trajectory, fig_from_list, check_solution
+from funcs.trajectory import get_trajectory, fig_from_list, check_solution
 
 # Fill up the page
 c1, c2 = st.columns([8,1])
