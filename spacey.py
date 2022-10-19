@@ -319,14 +319,6 @@ elif dashboard=='SpaceY.':
     </body>
     '''
     image2='''
-    <style>
-    .centered-and-cropped {
-      object-fit: cover;
-      border-radius:50%;
-      width: 300px;
-      height: 300px; 
-    }
-    </style>
     <body>
     <center>
      <figure>
@@ -336,14 +328,6 @@ elif dashboard=='SpaceY.':
     </body>
     '''
     image3='''
-    <style>
-    .centered-and-cropped {
-      object-fit: cover;
-      border-radius:50%;
-      width: 300px;
-      height: 300px; 
-    }
-    </style>
     <body>
     <center>
      <figure>
@@ -353,14 +337,6 @@ elif dashboard=='SpaceY.':
     </body>
     '''
     image4='''
-    <style>
-    .centered-and-cropped {
-      object-fit: cover;
-      border-radius:50%;
-      width: 300px;
-      height: 300px; 
-    }
-    </style>
     <body>
     <center>
      <figure>
