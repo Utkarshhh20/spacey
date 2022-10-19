@@ -306,8 +306,8 @@ elif dashboard=='SpaceY.':
     .centered-and-cropped {
       object-fit: cover;
       border-radius:50%;
-      width: 100px;
-      height: 100px; 
+      width: 300px;
+      height: 300px; 
     }
     </style>
     <body>
