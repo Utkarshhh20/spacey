@@ -300,7 +300,7 @@ elif dashboard=='SpaceY.':
     st.markdown(subtxt, unsafe_allow_html=True)
     st.write('')
     st.write('')
-    image1='''
+    images='''
     .centered-and-cropped {
       object-fit: cover;
       border-radius:50%;
@@ -321,4 +321,6 @@ elif dashboard=='SpaceY.':
       <figcaption>Bear3.</figcaption>
      </figure>
     </center>
+    '''
+    st.markdown(images, unsafe_allow_html=True)
     
