@@ -283,7 +283,7 @@ elif dashboard=='Rocket Launch Prediction':
     launchtemp=st.number_input('Please enter the temperature at launch time: ', step=1, value=72)
     histhightemp=st.number_input('Please enter the historical highest temperature: ', step=1, value=87)
     histlowtemp=st.number_input('Please enter the historical lowest temperature: ', step=1, value=70)
-    histavgtemp=st.number_input('Please enter the highest temperature: ', step=1, value=75)
+    histavgtemp=st.number_input('Please enter the highest average temperature: ', step=1, value=75)
     precipitation=st.number_input('Please enter the Precipitation at Launch Time: ', step=0.1, value=0.28)
     histavgprecipitation=st.number_input('Please enter the Historical average Precipitation: ', step=0.1, value=0.15)
     winddir=st.selectbox('Choose the wind direction: ', options=['E', 'NE', 'N','SE','W','NW','S', 'SW'])
