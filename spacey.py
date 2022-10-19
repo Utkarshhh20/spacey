@@ -300,7 +300,8 @@ elif dashboard=='SpaceY.':
     st.markdown(subtxt, unsafe_allow_html=True)
     st.write('')
     st.write('')
-    images='''
+    col1,col2,col3=st.columns(3)
+    image1='''
     <style>
     .centered-and-cropped {
       object-fit: cover;
@@ -313,18 +314,86 @@ elif dashboard=='SpaceY.':
     <center>
      <figure>
       <img class="centered-and-cropped"  src="https://github.com/Utkarshhh20/spacey/blob/main/images/rocket.png?raw=true" alt="Bear1">
-      <figcaption>Bear1.</figcaption>
+      <figcaption>Asteroid Defense Game.</figcaption>
      </figure>
-     <figure>
-      <img class="centered-and-cropped"  src="spacebg.png" alt="Bear2">
-      <figcaption>Bear2.</figcaption>
-     </figure>
-     <figure>
-      <img class="centered-and-cropped"  src="spacebg.png" alt="Bear3">
-      <figcaption>Bear3.</figcaption>
-     </figure>
-    </center>
     </body>
     '''
-    st.markdown(images, unsafe_allow_html=True)
-    
+    image2='''
+    <style>
+    .centered-and-cropped {
+      object-fit: cover;
+      border-radius:50%;
+      width: 100px;
+      height: 100px; 
+    }
+    </style>
+    <body>
+    <center>
+     <figure>
+      <img class="centered-and-cropped"  src="https://github.com/Utkarshhh20/spacey/blob/main/images/rocket.png?raw=true" alt="Bear1">
+      <figcaption>Asteroid Defense Game.</figcaption>
+     </figure>
+    </body>
+    '''
+    image3='''
+    <style>
+    .centered-and-cropped {
+      object-fit: cover;
+      border-radius:50%;
+      width: 100px;
+      height: 100px; 
+    }
+    </style>
+    <body>
+    <center>
+     <figure>
+      <img class="centered-and-cropped"  src="https://github.com/Utkarshhh20/spacey/blob/main/images/rocket.png?raw=true" alt="Bear1">
+      <figcaption>Asteroid Defense Game.</figcaption>
+     </figure>
+    </body>
+    '''
+    image4='''
+    <style>
+    .centered-and-cropped {
+      object-fit: cover;
+      border-radius:50%;
+      width: 100px;
+      height: 100px; 
+    }
+    </style>
+    <body>
+    <center>
+     <figure>
+      <img class="centered-and-cropped"  src="https://github.com/Utkarshhh20/spacey/blob/main/images/rocket.png?raw=true" alt="Bear1">
+      <figcaption>Asteroid Defense Game.</figcaption>
+     </figure>
+    </body>
+    '''
+    image5='''
+    <style>
+    .centered-and-cropped {
+      object-fit: cover;
+      border-radius:50%;
+      width: 100px;
+      height: 100px; 
+    }
+    </style>
+    <body>
+    <center>
+     <figure>
+      <img class="centered-and-cropped"  src="https://github.com/Utkarshhh20/spacey/blob/main/images/rocket.png?raw=true" alt="Bear1">
+      <figcaption>Asteroid Defense Game.</figcaption>
+     </figure>
+    </body>
+    '''
+    with col1:
+        st.markdown(image1, unsafe_allow_html=True)
+    with col2:
+        st.markdown(image2, unsafe_allow_html=True)
+    with col3:
+        st.markdown(image3, unsafe_allow_html=True)
+    col1,col2=st.columns(2)
+    with col1:
+        st.markdown(image4, unsafe_allow_html=True)
+    with col2:
+        st.markdown(image5, unsafe_allow_html=True)
