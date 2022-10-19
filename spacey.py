@@ -54,10 +54,10 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 
 menu_data = [
     {'icon': "fa fa-desktop", 'label':"Fundamental Indicators"},
-    {'icon': "fa fa-signal", 'label':"Rocket Simulation"},
-    {'icon': "fa fa-angle-double-left", 'label':"Create your own galaxy"},
-    {'icon': "bi bi-pie-chart", 'label':"Asteroid Defense"},
-    {'icon': "bi bi-twitter", 'label':"Rocket Launch Prediction"},
+    {'icon': "fa-space-shuttle", 'label':"Rocket Simulation"},
+    {'icon': "fa-globe", 'label':"Create your own galaxy"},
+    {'icon': "fa-shield", 'label':"Asteroid Defense"},
+    {'icon': "fa fa-rocket", 'label':"Rocket Launch Prediction"},
 ]
 #    {'icon': "bi bi-telephone", 'label':"Contact us"},
 over_theme = {'txc_inactive': "#D3D3D3",'menu_background':'#3948A5','txc_active':'white','option_active':'#3948A5'}
