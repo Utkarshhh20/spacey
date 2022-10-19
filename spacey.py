@@ -306,7 +306,7 @@ elif dashboard=='Rocket Launch Prediction':
     maxwind=st.number_input('Please enter the max wind speed: ', step=1, value=32)
     vis=st.number_input('Please enter the visibility: ', step=1, value=10)
     windlaunch=st.number_input('Please enter the wind speed at launch time: ', step=1, value=25)
-    condition=st.selectbox('Choose the conditions: ', options=['Cloudy', 'Fair', 'Heavy T-Storm', 'Light rain', 'Mostly Cloudy','Partly Cloudy', 'T-Storm'. 'Rain', 'Partly Cloudy','Thunder'])
+    condition=st.selectbox('Choose the conditions: ', options=['Cloudy', 'Fair', 'Heavy T-Storm', 'Light rain', 'Mostly Cloudy','Partly Cloudy', 'T-Storm', 'Rain', 'Partly Cloudy','Thunder'])
     if condition=='Cloudy':
         condition=0
     elif condition=='Fair':
