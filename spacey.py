@@ -314,7 +314,6 @@ elif dashboard=='SpaceY.':
     <center>
      <figure>
       <img class="centered-and-cropped"  src="https://media.npr.org/assets/img/2022/09/21/dart-zoom_bkg-nologos1_custom-268e95e828cae857c4ede745a46aa330197d8961.jpg" alt="asteroid">
-      <figcaption>Asteroid Defense Game.</figcaption>
      </figure>
     </body>
     '''
@@ -323,7 +322,6 @@ elif dashboard=='SpaceY.':
     <center>
      <figure>
       <img class="centered-and-cropped"  src="https://i.natgeofe.com/n/88420695-3555-4f84-90be-8f7903a1a57e/01_58_51a_remotesite-2-frame-8_square.jpg" alt="Predict Rocket Launches">
-      <figcaption>Predict Rocket Launches.</figcaption>
      </figure>
     </body>
     '''
@@ -332,7 +330,6 @@ elif dashboard=='SpaceY.':
     <center>
      <figure>
       <img class="centered-and-cropped"  src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2021/09/13/996011-isro-1.jpg" alt="Indian Space History">
-      <figcaption>Asteroid Indian Space history.</figcaption>
      </figure>
     </body>
     '''
@@ -341,7 +338,6 @@ elif dashboard=='SpaceY.':
     <center>
      <figure>
       <img class="centered-and-cropped"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/NGC_4414_%28NASA-med%29.jpg/1200px-NGC_4414_%28NASA-med%29.jpg" alt="Create your own galaxy.">
-      <figcaption>Create your own galaxy.</figcaption>
      </figure>
     </body>
     '''
@@ -350,7 +346,6 @@ elif dashboard=='SpaceY.':
     <center>
      <figure>
       <img class="centered-and-cropped"  src="https://static.appvn.com/a/uploads/screenshots/062016/space-simulator_sc_4.png" alt="Space rocket simulator.">
-      <figcaption>Space rocket simulator.</figcaption>
      </figure>
     </body>
     '''
