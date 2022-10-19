@@ -5,3 +5,5 @@ numpy
 plotly
 hydralit
 pandas
+scikit-learn
+scipy
