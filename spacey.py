@@ -261,3 +261,20 @@ if dashboard=='Create your own galaxy':
         .encode(x='x:Q', y='y:Q'))
 elif dashboard=='Rocket Launch Prediction':
     st.title('Rocket Launch Prediction')
+elif dashboard=='SpaceY.':
+    title='''
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel="stylesheet">
+        <style>
+        .spacey {
+            font-family: 'Montserrat';
+            font-size: 25px;
+            margin-top:0px;
+            font-weight: 700;
+            margin-bottom: 0px;
+        }
+        </style>
+        <body>
+        <center> <p1 class='spacey'> SpaceY. </p1> </center>
+        </body>
+        '''
+    st.markdown(title, unsafe_allow_html=True)
