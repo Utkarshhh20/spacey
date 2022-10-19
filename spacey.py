@@ -331,7 +331,7 @@ elif dashboard=='SpaceY.':
     <body>
     <center>
      <figure>
-      <img class="centered-and-cropped"  src="https://asiamedia.lmu.edu/wp-content/uploads/2019/04/diegocover.png" alt="Indian Space History">
+      <img class="centered-and-cropped"  src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2021/09/13/996011-isro-1.jpg" alt="Indian Space History">
       <figcaption>Asteroid Indian Space history.</figcaption>
      </figure>
     </body>
@@ -349,19 +349,59 @@ elif dashboard=='SpaceY.':
     <body>
     <center>
      <figure>
-      <img class="centered-and-cropped"  src="https://cdn.akamai.steamstatic.com/steam/apps/1718870/capsule_616x353.jpg?t=1654032297" alt="Space rocket simulator.">
+      <img class="centered-and-cropped"  src="https://static.appvn.com/a/uploads/screenshots/062016/space-simulator_sc_4.png" alt="Space rocket simulator.">
       <figcaption>Space rocket simulator.</figcaption>
      </figure>
     </body>
     '''
+    img1txt='''
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel="stylesheet">
+        <style>
+        .imgtxt {
+            font-family: 'Montserrat';
+            font-size: 23px;
+            margin-top:20px;
+            font-weight: 600;
+            margin-bottom: 0px;
+        }
+        </style>
+        <body>
+        <center> <p1 class='imgtxt'> Asteroid Defense Game.</p1> </center>
+        </body>
+    '''
+    img2txt='''
+        <body>
+        <center> <p1 class='imgtxt'> Predict Rocket Launches.</p1> </center>
+        </body>
+    '''
+    img3txt='''
+        <body>
+        <center> <p1 class='imgtxt'>  Indian Space history.</p1> </center>
+        </body>
+    '''
+    img4txt='''
+        <body>
+        <center> <p1 class='imgtxt'>Create your own galaxy.</p1> </center>
+        </body>
+    '''
+    img5txt='''
+        <body>
+        <center> <p1 class='imgtxt'> Space rocket simulator.</p1> </center>
+        </body>
+    '''
     with col1:
         st.markdown(image1, unsafe_allow_html=True)
+        st.markdown(img1txt, unsafe_allow_html=True)
     with col2:
         st.markdown(image2, unsafe_allow_html=True)
+        st.markdown(img2txt, unsafe_allow_html=True)
     with col3:
         st.markdown(image3, unsafe_allow_html=True)
+        st.markdown(img3txt, unsafe_allow_html=True)
     col1,col2=st.columns(2)
     with col1:
         st.markdown(image4, unsafe_allow_html=True)
+        st.markdown(img4txt, unsafe_allow_html=True)
     with col2:
         st.markdown(image5, unsafe_allow_html=True)
+        st.markdown(img5txt, unsafe_allow_html=True)
