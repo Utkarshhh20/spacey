@@ -398,6 +398,7 @@ elif dashboard=='SpaceY.':
         st.markdown(image3, unsafe_allow_html=True)
         st.markdown(img3txt, unsafe_allow_html=True)
     col1,col2=st.columns(2)
+    st.write('')
     with col1:
         st.markdown(image4, unsafe_allow_html=True)
         st.markdown(img4txt, unsafe_allow_html=True)
