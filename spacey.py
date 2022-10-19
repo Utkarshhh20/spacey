@@ -263,10 +263,10 @@ elif dashboard=='Rocket Launch Prediction':
     st.title('Rocket Launch Prediction')
 elif dashboard=='SpaceY.':
     title='''
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel="stylesheet">
         <style>
         .spacey {
-            font-family: 'Montserrat';
+            font-family: 'Roboto';
             font-size: 25px;
             margin-top:0px;
             font-weight: 700;
