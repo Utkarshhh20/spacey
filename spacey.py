@@ -370,14 +370,6 @@ elif dashboard=='SpaceY.':
     </body>
     '''
     image5='''
-    <style>
-    .centered-and-cropped {
-      object-fit: cover;
-      border-radius:50%;
-      width: 300px;
-      height: 300px; 
-    }
-    </style>
     <body>
     <center>
      <figure>
