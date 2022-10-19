@@ -313,7 +313,7 @@ elif dashboard=='SpaceY.':
     <body>
     <center>
      <figure>
-      <img class="centered-and-cropped"  src="https://cboard.cprogramming.com/attachments/c-programming/16381d1629626326-project-classic-asteroid-game-coded-c-sdl2-gnu-linux-windows-asteroid-png" alt="asteroid">
+      <img class="centered-and-cropped"  src="https://media.npr.org/assets/img/2022/09/21/dart-zoom_bkg-nologos1_custom-268e95e828cae857c4ede745a46aa330197d8961.jpg" alt="asteroid">
       <figcaption>Asteroid Defense Game.</figcaption>
      </figure>
     </body>
@@ -330,8 +330,8 @@ elif dashboard=='SpaceY.':
     <body>
     <center>
      <figure>
-      <img class="centered-and-cropped"  src="https://github.com/Utkarshhh20/spacey/blob/main/images/rocket.png?raw=true" alt="Bear1">
-      <figcaption>Asteroid Defense Game.</figcaption>
+      <img class="centered-and-cropped"  src="https://github.com/Utkarshhh20/spacey/blob/main/images/rocket.png?raw=true" alt="Predict Rocket Launches">
+      <figcaption>Predict Rocket Launches.</figcaption>
      </figure>
     </body>
     '''
@@ -347,8 +347,8 @@ elif dashboard=='SpaceY.':
     <body>
     <center>
      <figure>
-      <img class="centered-and-cropped"  src="https://github.com/Utkarshhh20/spacey/blob/main/images/rocket.png?raw=true" alt="Bear1">
-      <figcaption>Asteroid Defense Game.</figcaption>
+      <img class="centered-and-cropped"  src="https://github.com/Utkarshhh20/spacey/blob/main/images/rocket.png?raw=true" alt="Indian Space History">
+      <figcaption>Asteroid Indian Space history.</figcaption>
      </figure>
     </body>
     '''
@@ -364,8 +364,8 @@ elif dashboard=='SpaceY.':
     <body>
     <center>
      <figure>
-      <img class="centered-and-cropped"  src="https://github.com/Utkarshhh20/spacey/blob/main/images/rocket.png?raw=true" alt="Bear1">
-      <figcaption>Asteroid Defense Game.</figcaption>
+      <img class="centered-and-cropped"  src="https://github.com/Utkarshhh20/spacey/blob/main/images/rocket.png?raw=true" alt="Create your own galaxy.">
+      <figcaption>Create your own galaxy.</figcaption>
      </figure>
     </body>
     '''
@@ -381,8 +381,8 @@ elif dashboard=='SpaceY.':
     <body>
     <center>
      <figure>
-      <img class="centered-and-cropped"  src="https://github.com/Utkarshhh20/spacey/blob/main/images/rocket.png?raw=true" alt="Bear1">
-      <figcaption>Asteroid Defense Game.</figcaption>
+      <img class="centered-and-cropped"  src="https://github.com/Utkarshhh20/spacey/blob/main/images/rocket.png?raw=true" alt="Space rocket simulator.">
+      <figcaption>Space rocket simulator.</figcaption>
      </figure>
     </body>
     '''
