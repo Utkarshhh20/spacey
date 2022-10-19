@@ -295,4 +295,4 @@ elif dashboard=='SpaceY.':
         Feel free to browse the website as you wish, and we hope you have an amazing experience.  </p1> </center>
         </body>
     '''
-    st.write(' ')
+    st.markdown(subtxt, unsafe_allow_html=True)
