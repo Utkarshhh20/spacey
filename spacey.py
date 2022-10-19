@@ -322,7 +322,7 @@ elif dashboard=='SpaceY.':
     <body>
     <center>
      <figure>
-      <img class="centered-and-cropped"  src="https://github.com/Utkarshhh20/spacey/blob/main/images/rocket.png?raw=true" alt="Predict Rocket Launches">
+      <img class="centered-and-cropped"  src="https://i.natgeofe.com/n/88420695-3555-4f84-90be-8f7903a1a57e/01_58_51a_remotesite-2-frame-8_square.jpg" alt="Predict Rocket Launches">
       <figcaption>Predict Rocket Launches.</figcaption>
      </figure>
     </body>
@@ -331,7 +331,7 @@ elif dashboard=='SpaceY.':
     <body>
     <center>
      <figure>
-      <img class="centered-and-cropped"  src="https://github.com/Utkarshhh20/spacey/blob/main/images/rocket.png?raw=true" alt="Indian Space History">
+      <img class="centered-and-cropped"  src="https://asiamedia.lmu.edu/wp-content/uploads/2019/04/diegocover.png" alt="Indian Space History">
       <figcaption>Asteroid Indian Space history.</figcaption>
      </figure>
     </body>
@@ -340,7 +340,7 @@ elif dashboard=='SpaceY.':
     <body>
     <center>
      <figure>
-      <img class="centered-and-cropped"  src="https://github.com/Utkarshhh20/spacey/blob/main/images/rocket.png?raw=true" alt="Create your own galaxy.">
+      <img class="centered-and-cropped"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/NGC_4414_%28NASA-med%29.jpg/1200px-NGC_4414_%28NASA-med%29.jpg" alt="Create your own galaxy.">
       <figcaption>Create your own galaxy.</figcaption>
      </figure>
     </body>
@@ -349,7 +349,7 @@ elif dashboard=='SpaceY.':
     <body>
     <center>
      <figure>
-      <img class="centered-and-cropped"  src="https://github.com/Utkarshhh20/spacey/blob/main/images/rocket.png?raw=true" alt="Space rocket simulator.">
+      <img class="centered-and-cropped"  src="https://cdn.akamai.steamstatic.com/steam/apps/1718870/capsule_616x353.jpg?t=1654032297" alt="Space rocket simulator.">
       <figcaption>Space rocket simulator.</figcaption>
      </figure>
     </body>
