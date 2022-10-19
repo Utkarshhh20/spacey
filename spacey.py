@@ -301,23 +301,25 @@ elif dashboard=='SpaceY.':
     st.write('')
     st.write('')
     images='''
+    <style>
     .centered-and-cropped {
       object-fit: cover;
       border-radius:50%;
       width: 100px;
       height: 100px; 
     }
+    </style>
     <center>
      <figure>
-      <img class="centered-and-cropped"  src="rocket.jpg" alt="Bear1">
+      <img class="centered-and-cropped"  src="spacebg.png" alt="Bear1">
       <figcaption>Bear1.</figcaption>
      </figure>
      <figure>
-      <img class="centered-and-cropped"  src="rocket.jpg" alt="Bear2">
+      <img class="centered-and-cropped"  src="spacebg.png" alt="Bear2">
       <figcaption>Bear2.</figcaption>
      </figure>
      <figure>
-      <img class="centered-and-cropped"  src="rocket.jpg" alt="Bear3">
+      <img class="centered-and-cropped"  src="spacebg.png" alt="Bear3">
       <figcaption>Bear3.</figcaption>
      </figure>
     </center>
