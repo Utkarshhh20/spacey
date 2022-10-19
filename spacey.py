@@ -267,7 +267,7 @@ elif dashboard=='SpaceY.':
         <style>
         .spacey {
             font-family: 'Roboto Mono';
-            font-size: 50px;
+            font-size: 70px;
             margin-top:0px;
             font-weight: 700;
             margin-bottom: 0px;
