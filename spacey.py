@@ -304,8 +304,6 @@ elif dashboard=='SpaceY.':
     st.write('')
     st.write('')
     st.write('')
-    st.write('')
-    st.write('')
     col1,col2,col3=st.columns(3)
     image1='''
     <style>
@@ -351,7 +349,7 @@ elif dashboard=='SpaceY.':
     <body>
     <center>
      <figure>
-      <img class="centered-and-cropped"  src="https://static.appvn.com/a/uploads/screenshots/062016/space-simulator_sc_4.png" alt="Space rocket simulator.">
+      <img class="centered-and-cropped"  src="http://spaceflightnow.com/wp-content/uploads/2017/02/1-02-2.jpg" alt="Space rocket simulator.">
      </figure>
     </body>
     '''
