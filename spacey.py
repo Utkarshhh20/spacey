@@ -54,7 +54,7 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 
 menu_data = [
     {'icon': "fa fa-desktop", 'label':"Fundamental Indicators"},
-    {'icon': "bi bi-airplane", 'label':"Rocket Simulation"},
+    {'icon': "bi bi-speedometer", 'label':"Rocket Simulation"},
     {'icon': "bi bi-globe", 'label':"Create your own galaxy"},
     {'icon': "bi bi-shield-plus", 'label':"Asteroid Defense"},
     {'icon': "fa fa-rocket", 'label':"Rocket Launch Prediction"},
