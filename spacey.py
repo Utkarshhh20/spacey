@@ -313,7 +313,7 @@ elif dashboard=='SpaceY.':
     <body>
     <center>
      <figure>
-      <img class="centered-and-cropped"  src="https://github.com/Utkarshhh20/spacey/blob/main/images/rocket.png?raw=true" alt="Bear1">
+      <img class="centered-and-cropped"  src="https://cboard.cprogramming.com/attachments/c-programming/16381d1629626326-project-classic-asteroid-game-coded-c-sdl2-gnu-linux-windows-asteroid-png" alt="asteroid">
       <figcaption>Asteroid Defense Game.</figcaption>
      </figure>
     </body>
