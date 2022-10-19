@@ -309,6 +309,7 @@ elif dashboard=='SpaceY.':
       height: 100px; 
     }
     </style>
+    <body>
     <center>
      <figure>
       <img class="centered-and-cropped"  src="spacebg.png" alt="Bear1">
@@ -323,6 +324,7 @@ elif dashboard=='SpaceY.':
       <figcaption>Bear3.</figcaption>
      </figure>
     </center>
+    </body>
     '''
     st.markdown(images, unsafe_allow_html=True)
     
