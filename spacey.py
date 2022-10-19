@@ -12,7 +12,7 @@ import plotly.express as px
 from collections import namedtuple
 import altair as alt
 from sim import World, Vehicle
-
+import pickle
 st.set_page_config(page_title="SpaceY", page_icon="🚀", layout="wide")
 
 df = px.data.iris()
@@ -268,6 +268,74 @@ if dashboard=='Create your own galaxy':
     st.write('Galaxies form out of immense clouds of gas that collapse and rotate. As they evolve, stars form within them. Entire galaxies can collide, changing their appearance. Looking deep into space, we see galaxies at earlier stages in their lives, and learn more about their evolution.')
 elif dashboard=='Rocket Launch Prediction':
     st.title('Rocket Launch Prediction')
+    filename = 'rocket_prediction.pkl'
+    loaded_model = pkl.load(open(filename, 'rb'))
+    st.subheader('Please fill in the following details accurately to get an estimation of a possible launch or not')
+    st.write('All temperature is in fahrenheit')
+    crew=st.selectbox('Does the rocket have a crew: ', options=['Crewed', 'Uncrewed'])
+    if crew=='Crewed':
+        crew=1
+    else:
+        crew=0
+    hightemp=st.number_input('Please enter the highest temperature: ', step=1, value=75)
+    lowtemp=st.number_input('Please enter the lowest temperature: ', step=1, value=68)
+    avgtemp=st.number_input('Please enter the average temperature: ', step=1, value=71)
+    launchtemp=st.number_input('Please enter the temperature at launch time: ', step=1, value=72)
+    histhightemp=st.number_input('Please enter the historical highest temperature: ', step=1, value=87)
+    histlowtemp=st.number_input('Please enter the historical lowest temperature: ', step=1, value=70)
+    histavgtemp=st.number_input('Please enter the highest temperature: ', step=1, value=75)
+    precipitation=st.number_input('Please enter the Precipitation at Launch Time: ', step=0.1, value=0.28)
+    histavgprecipitation=st.number_input('Please enter the Historical average Precipitation: ', step=0.1, value=0.15)
+    winddir=st.selectbox('Choose the wind direction: ', options=['E', 'NE', 'N','SE','W','NW','S', 'SW'])
+    if winddir=='E':
+        winddir=0
+    elif winddir=='NE':
+        winddir=2
+    elif winddir=='N':
+        winddir=1
+    elif winddir=='SE':
+        winddir=5
+    elif winddir=='W':
+        winddir=7
+    elif winddir=='NW':
+        winddir=3
+    elif winddir=='S':
+        winddir=4
+    elif winddir=='SW':
+        winddir=6
+    maxwind=st.number_input('Please enter the max wind speed: ', step=1, value=32)
+    vis=st.number_input('Please enter the visibility: ', step=1, value=10)
+    windlaunch=st.number_input('Please enter the wind speed at launch time: ', step=1, value=25)
+    condition=st.selectbox('Choose the conditions: ', options=['Cloudy', 'Fair', 'Heavy T-Storm', 'Light rain', 'Mostly Cloudy','Partly Cloudy', 'T-Storm'. 'Rain', 'Partly Cloudy','Thunder'])
+    if condition=='Cloudy':
+        condition=0
+    elif condition=='Fair':
+        condition=1
+    elif condition=='Heavy T-Storm':
+        condition=2
+    elif condition=='Light rain':
+        condition=3
+    elif condition=='Mostly Cloudy':
+        condition=4
+    elif condition=='Partly Cloudly':
+        condition=5
+    elif condition=='Partly Cloudy':
+        condition=6
+    elif condition=='Rain':
+        condition=7
+    elif condition=='T-Storm':
+        condition=8
+    elif condition=='Thunder':
+        condition=9
+    button=st.button('Calculate')
+    if button==True:
+        data_input = [ crew  , hightemp  , lowtemp  , avgtemp  ,  launchtemp  , histhightemp  , histlowtemp  , histavgtemp  , precipitation,  histavgprecipitation  , winddir  , maxwind  ,  vis  ,  windlaunch, condition ]
+        prediction=loaded_model.predict([data_input])
+        for i in prediction:
+            if i=='N':
+                st.subheader('The conditions are not optimal to Launch. Kindly delay it.')
+            else:
+                st.subheader('The conditions are optimal to Launch. We are good to go.')
 elif dashboard=='SpaceY.':
     title='''
     <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel="stylesheet">
