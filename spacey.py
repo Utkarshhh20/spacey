@@ -270,7 +270,8 @@ elif dashboard=='Rocket Launch Prediction':
     st.title('Rocket Launch Prediction')
     filename = 'rocket_prediction.pkl'
     loaded_model = pkl.load(open(filename, 'rb'))
-    st.subheader('Please fill in the following details accurately to get an estimation of a possible launch or not')
+    st.subheader('Please fill in the following details accurately to get an estimation of a possible launch or not.')
+    st.write('This model was developed using ML Decision Tree algorithm') 
     st.write('All temperature is in fahrenheit')
     crew=st.selectbox('Does the rocket have a crew: ', options=['Crewed', 'Uncrewed'])
     if crew=='Crewed':
