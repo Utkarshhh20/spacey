@@ -256,7 +256,7 @@ if dashboard=='Create your own galaxy':
         y = radius * math.sin(angle)
         data.append(Point(x, y))
 
-    st.altair_chart(alt.Chart(pd.DataFrame(data), height=650, width=650)
+    st.altair_chart(alt.Chart(pd.DataFrame(data), height=650, width=650, use_container_width=True)
         .mark_circle(color='#0068c9', opacity=0.5)
         .encode(x='x:Q', y='y:Q'))
 elif dashboard=='Rocket Launch Prediction':
