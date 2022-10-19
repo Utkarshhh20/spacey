@@ -295,3 +295,4 @@ sections such as Asteroid Defense Game, Predict Rocket Launches, Create your own
 Feel free to browse the website as you wish, and we hope you have an amazing experience.  </p1> </center>
         </body>
         '''
+     st.markdown(subtxt, unsafe_allow_html=True)
