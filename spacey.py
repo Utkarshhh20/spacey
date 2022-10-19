@@ -12,7 +12,7 @@ import plotly.express as px
 from collections import namedtuple
 import altair as alt
 from sim import World, Vehicle
-import pickle
+import pickle as pkl
 st.set_page_config(page_title="SpaceY", page_icon="🚀", layout="wide")
 
 df = px.data.iris()
