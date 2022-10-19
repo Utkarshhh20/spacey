@@ -57,7 +57,7 @@ menu_data = [
     {'icon': "fa fa-signal", 'label':"Rocket Simulation"},
     {'icon': "fa fa-angle-double-left", 'label':"Create your own galaxy"},
     {'icon': "bi bi-pie-chart", 'label':"Asteroid Defense"},
-    {'icon': "bi bi-twitter", 'label':"Twitter Analysis"},
+    {'icon': "bi bi-twitter", 'label':"Rocket Launch Prediction"},
 ]
 #    {'icon': "bi bi-telephone", 'label':"Contact us"},
 over_theme = {'txc_inactive': "#D3D3D3",'menu_background':'#3948A5','txc_active':'white','option_active':'#3948A5'}
@@ -259,3 +259,5 @@ if dashboard=='Create your own galaxy':
     st.altair_chart(alt.Chart(pd.DataFrame(data), height=650, width=650)
         .mark_circle(color='#0068c9', opacity=0.5)
         .encode(x='x:Q', y='y:Q'))
+elif dashboard=='Rocket Launch Prediction':
+    st.title('Rocket Launch Prediction')
