@@ -59,15 +59,14 @@ menu_data = [
     {'icon': "bi bi-shield-plus", 'label':"Asteroid Defense"},
     {'icon': "fa fa-rocket", 'label':"Rocket Launch Prediction"},
 ]
-#    {'icon': "bi bi-telephone", 'label':"Contact us"},
 over_theme = {'txc_inactive': "#D3D3D3",'menu_background':'#3948A5','txc_active':'white','option_active':'#3948A5'}
 dashboard = hc.nav_bar(
 menu_definition=menu_data,
 override_theme=over_theme,
 home_name='SpaceY.',
-hide_streamlit_markers=True, #will show the st hamburger as well as the navbar now!
-sticky_nav=True, #at the top or not
-sticky_mode='sticky', #jumpy or not-jumpy, but sticky or pinned
+hide_streamlit_markers=True, 
+sticky_nav=True, 
+sticky_mode='sticky', 
 use_animation=True,
 key='NavBar'
 )
