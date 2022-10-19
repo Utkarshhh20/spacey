@@ -240,6 +240,8 @@ elif dashboard=='Rocket Simulation':
         text5='Fuel and total vehicle mass'
         make_fig("t",["fuel","mass"],"Heading (in the absolute xy plane)",text5,col1)
 if dashboard=='Create your own galaxy':
+    st.title('Create your own galaxy')
+    st.subheader('Enter the number of points and turns in your galaxy to make your own galaxy!')
     total_points = st.slider("Number of points in spiral", 1, 6000, 2000)
     num_turns = st.slider("Number of turns in spiral", 1, 150, 9)
 
@@ -259,6 +261,9 @@ if dashboard=='Create your own galaxy':
     st.altair_chart(alt.Chart(pd.DataFrame(data), height=650, width=650)
         .mark_circle(color='#0068c9', opacity=0.5)
         .encode(x='x:Q', y='y:Q'))
+    st.write('')
+    st.subheader('How do galaxies form?')
+    st.write('Galaxies form out of immense clouds of gas that collapse and rotate. As they evolve, stars form within them. Entire galaxies can collide, changing their appearance. Looking deep into space, we see galaxies at earlier stages in their lives, and learn more about their evolution.')
 elif dashboard=='Rocket Launch Prediction':
     st.title('Rocket Launch Prediction')
 elif dashboard=='SpaceY.':
