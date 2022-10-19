@@ -300,6 +300,12 @@ elif dashboard=='SpaceY.':
     st.markdown(subtxt, unsafe_allow_html=True)
     st.write('')
     st.write('')
+    st.write('')
+    st.write('')
+    st.write('')
+    st.write('')
+    st.write('')
+    st.write('')
     col1,col2,col3=st.columns(3)
     image1='''
     <style>
