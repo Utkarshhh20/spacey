@@ -482,6 +482,8 @@ elif dashboard=='SpaceY.':
     with col2:
         st.markdown(image5, unsafe_allow_html=True)
         st.markdown(img5txt, unsafe_allow_html=True)
+    st.write('')
+    st.write('')
     def spheres(size, clr, dist=0): 
         theta = np.linspace(0,2*np.pi,100)
         phi = np.linspace(0,np.pi,100)
