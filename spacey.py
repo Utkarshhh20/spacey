@@ -278,3 +278,20 @@ elif dashboard=='SpaceY.':
         </body>
         '''
     st.markdown(title, unsafe_allow_html=True)
+    subtxt='''
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel="stylesheet">
+        <style>
+        .spaceysub {
+            font-family: 'Montserrat';
+            font-size: 15px;
+            margin-top:20px;
+            font-weight: 600;
+            margin-bottom: 0px;
+        }
+        </style>
+        <body>
+        <center> <p1 class='spaceysub'> A threshold of all things space, made by the ChainCoders Team, with
+sections such as Asteroid Defense Game, Predict Rocket Launches, Create your own galaxy, Space Rocket Simulator and view our 3-D model of the solar system. etc.
+Feel free to browse the website as you wish, and we hope you have an amazing experience.  </p1> </center>
+        </body>
+        '''
