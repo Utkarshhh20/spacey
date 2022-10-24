@@ -502,7 +502,7 @@ elif dashboard=='SpaceY.':
     st.write('')
     st.write('')
     st.write('')
-    st.header('3-D Model of the Solar System')
+    st.header('3-D Model of the Solar System - Interactive')
     st.write('')
     def spheres(size, clr, dist=0): 
         theta = np.linspace(0,2*np.pi,100)
