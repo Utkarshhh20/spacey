@@ -467,7 +467,7 @@ elif dashboard=='SpaceY.':
     '''
     img3txt='''
         <body>
-        <center> <p1 class='imgtxt'>  Indian Space history.</p1> </center>
+        <center> <p1 class='imgtxt'>  Quiz on space.</p1> </center>
         </body>
     '''
     img4txt='''
