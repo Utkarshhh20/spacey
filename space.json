@@ -1,0 +1,33 @@
+{
+  "1": {
+    "question": "Who invented the telescope?\n(a) Galileo\n(b) Hans Lippershey\n(c) Johannes Kepler\n(d) Hypatia\n",
+    "answer": "b",
+    "more_info": "Many people believe that Galileo Galilei was the first astronomer to invent and build the telescope; however, the first telescope was made by Hans Lippershey in the early 1600s.",
+    "user_response": "None"
+  },
+  "2": {
+    "question": "Which spacecraft was Laika, the first living creature sent into space?\n(a) Sputnik 3 \n(b) Sputnik 2\n(c) Apollo 11\n(d) Vostok 1\n",
+    "answer": "b",
+    "more_info": "The first animal to make an orbital spaceflight around the Earth was the dog Laika, aboard the Soviet spacecraft Sputnik 2 on 3 November 1957.",
+    "user_response": "None"
+  },
+  "3": {
+    "question": "Which planets do not have a natural satellite?\n(a) Mercury and Neptune\n(b) Mercury and Saturn\n(c) Mercury and Venus\n(d) Uranus and Venus\n",
+    "answer": "c",
+    "more_info": "Of the terrestrial (rocky) planets of the inner solar system, neither Mercury nor Venus have any moons at all, Earth has one and Mars has its two small moons.",
+    "user_response": "None"
+  },
+  "4": {
+    "question": "The atmosphere in Mars is mostly composed of:\n(a) Nitrogen\n(b) Helium\n(c) Oxygen\n(d) \n Carbon dioxide",
+    "answer": "d",
+    "more_info": "The results SAM spit out confirmed the makeup of the Martian atmosphere at the surface: 95% by volume of carbon dioxide (CO2), 2.6% molecular nitrogen (N2), 1.9% argon (Ar), 0.16% molecular oxygen (O2), and 0.06% carbon monoxide (CO).",
+    "user_response": "None"
+  },
+  "5": {
+    "question": "Who discovered dark matter??\n(a) Vera Rubin\n(b) Halton Arp\n(c) Jan Oort\n(d) Fritz Zwicky\n",
+    "answer": "d",
+    "more_info": "The term dark matter was coined in 1933 by Fritz Zwicky of the California Institute of Technology to describe the unseen matter that must dominate one feature of the universe—the Coma Galaxy Cluster. ",
+    "user_response": "None"
+  }
+}
+
