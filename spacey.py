@@ -485,6 +485,7 @@ elif dashboard=='SpaceY.':
         st.markdown(img1txt, unsafe_allow_html=True)
         st.write('')
         st.write('')
+        st.write('')
     with col2:
         st.markdown(image2, unsafe_allow_html=True)
         st.markdown(img2txt, unsafe_allow_html=True)
@@ -498,6 +499,7 @@ elif dashboard=='SpaceY.':
     with col2:
         st.markdown(image5, unsafe_allow_html=True)
         st.markdown(img5txt, unsafe_allow_html=True)
+    st.write('')
     st.write('')
     st.write('')
     st.header('3-D Model of the Solar System')
