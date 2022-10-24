@@ -500,6 +500,8 @@ elif dashboard=='SpaceY.':
         st.markdown(img5txt, unsafe_allow_html=True)
     st.write('')
     st.write('')
+    st.header('3-D Model of the Solar System')
+    st.write('')
     def spheres(size, clr, dist=0): 
         theta = np.linspace(0,2*np.pi,100)
         phi = np.linspace(0,np.pi,100)
@@ -535,24 +537,24 @@ elif dashboard=='SpaceY.':
     diameter = [((i / 12756) * 2) for i in diameter_km]
     distance_from_sun = [0, 57.9, 108.2, 149.6, 227.9, 778.6, 1433.5, 2872.5, 4495.1]
 
-    trace0=spheres(diameter[0], '#ffff00', distance_from_sun[0]) # Sun
-    trace1=spheres(diameter[1], '#87877d', distance_from_sun[1]) # Mercury
-    trace2=spheres(diameter[2], '#d23100', distance_from_sun[2]) # Venus
-    trace3=spheres(diameter[3], '#325bff', distance_from_sun[3]) # Earth
-    trace4=spheres(diameter[4], '#b20000', distance_from_sun[4]) # Mars
-    trace5=spheres(diameter[5], '#ebebd2', distance_from_sun[5]) # Jupyter
-    trace6=spheres(diameter[6], '#ebcd82', distance_from_sun[6]) # Saturn
-    trace7=spheres(diameter[7], '#37ffda', distance_from_sun[7]) # Uranus
-    trace8=spheres(diameter[8], '#2500ab', distance_from_sun[8]) # Neptune
+    trace0=spheres(diameter[0], '#ffff00', distance_from_sun[0]) 
+    trace1=spheres(diameter[1], '#87877d', distance_from_sun[1])
+    trace2=spheres(diameter[2], '#d23100', distance_from_sun[2]) 
+    trace3=spheres(diameter[3], '#325bff', distance_from_sun[3]) 
+    trace4=spheres(diameter[4], '#b20000', distance_from_sun[4]) 
+    trace5=spheres(diameter[5], '#ebebd2', distance_from_sun[5]) 
+    trace6=spheres(diameter[6], '#ebcd82', distance_from_sun[6]) 
+    trace7=spheres(diameter[7], '#37ffda', distance_from_sun[7])
+    trace8=spheres(diameter[8], '#2500ab', distance_from_sun[8]) 
 
-    trace11 = orbits(distance_from_sun[1]) # Mercury
-    trace12 = orbits(distance_from_sun[2]) # Venus
-    trace13 = orbits(distance_from_sun[3]) # Earth
-    trace14 = orbits(distance_from_sun[4]) # Mars
-    trace15 = orbits(distance_from_sun[5]) # Jupyter
-    trace16 = orbits(distance_from_sun[6]) # Saturn
-    trace17 = orbits(distance_from_sun[7]) # Uranus
-    trace18 = orbits(distance_from_sun[8]) # Neptune
+    trace11 = orbits(distance_from_sun[1])
+    trace12 = orbits(distance_from_sun[2])
+    trace13 = orbits(distance_from_sun[3]) 
+    trace14 = orbits(distance_from_sun[4]) 
+    trace15 = orbits(distance_from_sun[5]) 
+    trace16 = orbits(distance_from_sun[6]) 
+    trace17 = orbits(distance_from_sun[7]) 
+    trace18 = orbits(distance_from_sun[8]) 
 
     trace21 = orbits(23, distance_from_sun[6], '#827962', 3) 
     trace22 = orbits(24, distance_from_sun[6], '#827962', 3) 
@@ -598,8 +600,10 @@ elif dashboard=='SpaceY.':
                             trace11, trace12, trace13, trace14, trace15, trace16, trace17, trace18,
                             trace21, trace22, trace23, trace24, trace25, trace26],
                     layout = layout)
-
+    
     st.plotly_chart(fig, use_container_width=True)
+    st.write('')
+    st.write('Our planetary system is located in an outer spiral arm of the Milky Way galaxy.\n Our solar system consists of our star, the Sun, and everything bound to it by gravity – the planets Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune; dwarf planets such as Pluto; dozens of moons; and millions of asteroids, comets, and meteoroids. Beyond our own solar system, we have discovered thousands of planetary systems orbiting other stars in the Milky Way.')
 if dashboard=='Space Quiz':
     n=0
     def ask_one_question(question):
