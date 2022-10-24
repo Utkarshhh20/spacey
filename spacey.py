@@ -244,6 +244,22 @@ if dashboard=='Create your own galaxy':
     st.subheader('Enter the number of points and turns in your galaxy to make your own galaxy!')
     total_points = st.slider("Number of points in spiral", 1, 6000, 2000)
     num_turns = st.slider("Number of turns in spiral", 1, 150, 9)
+    col = st.select_slider('Select a range of color wavelength',
+    options=['red', 'orange', 'yellow', 'green', 'blue', 'white', 'black'],)
+    if col=='red':
+        color='#c91400'
+    elif col=='orange':
+        color='#c97500'
+    elif col=='yellow':
+        color='#bfc900'
+    elif col=='green':
+        color='#03c900'
+    elif col=='blue':
+        color='#0065c9'
+    elif col=='black':
+        color='#080000'
+    elif col=='white':
+        color='#fcfafa'
 
     Point = namedtuple('Point', 'x y')
     data = []
@@ -259,7 +275,7 @@ if dashboard=='Create your own galaxy':
         data.append(Point(x, y))
 
     st.altair_chart(alt.Chart(pd.DataFrame(data), height=650, width=650)
-        .mark_circle(color='#0068c9', opacity=0.5)
+        .mark_circle(color=color, opacity=0.5)
         .encode(x='x:Q', y='y:Q'))
     st.write('')
     st.subheader('How do galaxies form?')
