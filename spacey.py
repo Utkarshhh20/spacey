@@ -13,6 +13,7 @@ from collections import namedtuple
 import altair as alt
 from sim import World, Vehicle
 import pickle as pkl
+import json
 st.set_page_config(page_title="SpaceY", page_icon="🚀", layout="wide")
 
 df = px.data.iris()
@@ -53,10 +54,10 @@ right: 2rem;
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
 menu_data = [
-    {'icon': "fa fa-desktop", 'label':"Fundamental Indicators"},
+    {'icon': "bi bi-shield-plus", 'label':"Asteroid Defense"},
     {'icon': "bi bi-speedometer", 'label':"Rocket Simulation"},
     {'icon': "bi bi-globe", 'label':"Create your own galaxy"},
-    {'icon': "bi bi-shield-plus", 'label':"Asteroid Defense"},
+    {'icon': "bi bi-patch-question", 'label':"Space Quiz"},
     {'icon': "fa fa-rocket", 'label':"Rocket Launch Prediction"},
 ]
 over_theme = {'txc_inactive': "#D3D3D3",'menu_background':'#3948A5','txc_active':'white','option_active':'#3948A5'}
@@ -583,3 +584,72 @@ elif dashboard=='SpaceY.':
                     layout = layout)
 
     st.plotly_chart(fig, use_container_width=True)
+if dashboard=='Space Quiz':
+    n=0
+    def ask_one_question(question):
+        global n
+        n+=1
+        st.subheader("\n" + question)
+        choice=st.radio("Enter Your Choice [a/b/c/d]: ", ('a','b','c','d'), key=n)
+        time.sleep(5)
+        if choice.lower() in ['a', 'b', 'c', 'd']:
+                st.write('The option you have selected is ', choice, '.')
+                return choice
+
+    def score_one_result(key, meta):
+        actual = meta["answer"]
+        if meta["user_response"].lower() == actual.lower():
+            st.subheader("Q.{0} Absolutely Correct!\n".format(key))
+            return 2
+        else:
+            st.subheader("Q.{0} Incorrect!".format(key))
+            st.subheader("Right Answer is ({0})".format(actual))
+            st.subheader ("Learn more : " + meta["more_info"] + "\n")
+            return -1
+
+
+    def test(questions):
+        score = 0
+        st.subheader("General Instructions:\n1. Please select your correct option, the default answers will be a.\n2. Each question carries 2 points\n3. Wrong answer leads to -1 marks per question\n4. Each question has 5 seconds to answer. Answers are automatically submitted.\nQuiz will start momentarily. Good Luck!\n")
+        time.sleep(10)
+        for key, meta in questions.items():
+            questions[key]["user_response"] = ask_one_question(meta["question"])
+        st.subheader("\n***************** RESULT ********************\n")
+        for key, meta in questions.items():
+            score += score_one_result(key, meta)
+        st.subheader(f"Your Score: {score} / {(2 * len(questions))}")
+
+    def load_question(filename):
+        """
+        loads the questions from the JSON file into a Python dictionary and returns it
+        """
+        questions = None
+        with open(filename, "r") as read_file:
+            questions = json.load(read_file)
+        return (questions)
+
+
+    def play_quiz():
+        flag = False
+
+        if not flag:
+            questions = load_question('topics/'+'space'+'.json')
+            test(questions)
+        else:
+            play_quiz() # replay if flag was raised
+
+    def user_begin_prompt():
+        st.subheader("Wanna test your GK?\nA. Yes\nB. No")
+        play = st.selectbox('Wanna test your GK?', ['A','B'])
+        if play.lower() == 'a' or play.lower() ==  'y':
+            play_quiz()
+        elif play.lower() == 'b':
+            st.subheader("Hope you come back soon!")
+        else:
+            st.subheader("Hmm. I didn't quite understand that.\nPress A to play, or B to quit.")
+            user_begin_prompt()
+
+    def execute():
+        user_begin_prompt()
+
+    execute()
